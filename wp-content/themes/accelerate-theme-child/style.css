@@ -50,8 +50,34 @@
 
 .blog-post .read-more-link {
 	font-size: 15px;
-	font-family: 'Montserrat';
-	font-weight: bold;
-	color: #45ac9d;
-	text-transform: uppercase;
+
+
+
+/* Case Studies */
+
+article.case-study {
+	margin: 40px 0 0;
+	font-size: .5em;
+
+}
+
+article.case-study.h6 {
+	color: pink;
+
+}
+
+
+aside.case-study-sidebar {
+	float: left;
+	width: 300px;
+	margin: 0 40px 0 0;
+
+}
+
+
+
+div.case-study-images img {
+	margin-bottom: 50px;
+	border: 1px solid #ddd;
+	display: inline-block;
 }
