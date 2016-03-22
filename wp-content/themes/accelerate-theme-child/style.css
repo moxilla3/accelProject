@@ -50,6 +50,7 @@
 
 .blog-post .read-more-link {
 	font-size: 15px;
+}
 
 
 
@@ -57,19 +58,40 @@
 
 article.case-study {
 	margin: 40px 0 0;
-	font-size: .5em;
+}
+
+article.case-study h5 {
+	color: #ddd;
+	font-size: .8em;
+	margin: 0;
+	margin-bottom: 10;
+}
+
+
+article.case-study h6 {
+	font-size: .8em;
+	margin-top: 10px;
 
 }
 
-article.case-study.h6 {
-	color: pink;
 
+article.case-study p {
+	font-size: 1,2em;
+	margin-top: 40px;
 }
+
+
+article.case-study a {
+	font-weight: bold;
+}
+
+
 
 
 aside.case-study-sidebar {
 	float: left;
 	width: 300px;
+	height: 2000px;
 	margin: 0 40px 0 0;
 
 }
@@ -80,4 +102,6 @@ div.case-study-images img {
 	margin-bottom: 50px;
 	border: 1px solid #ddd;
 	display: inline-block;
+	height:1005;
+	text-align: right;
 }
