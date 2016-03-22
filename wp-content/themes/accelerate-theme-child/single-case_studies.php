@@ -16,13 +16,49 @@ get_header(); ?>
 
     <div id="primary" class="site-content">
         <div id="content" role="main">
-            <?php while ( have_posts() ) : the_post(); ?>
-                <article class="case-study">
+            <?php while ( have_posts() ) : the_post();
+                $services = get_field('services');  
+                $client = get_field('client');  
+                $link = get_field('site_link');  
+                $image1 = get_field('image_1');  
+                $image2 = get_field('image_2');  
+                $image3 = get_field('image_3'); ?>
+                $size = "medium";
+
+            <article class="case-study">
+
+                <aside class="case-study-sidebar">
+                    <h2><?php the_title(); ?></h2>
+                    <h5><?php echo $services; ?></h5>
+                    <h6>Client: <?php echo $client; ?></h6>
+
 
                 <?php the_content(); ?>
-                </article>
+                
+                <p><a href="<?php echo $link; ;?>">Site Link</a></p>
+                </aside>
 
-            <?php endwhile; // end of the loop. ?>
+
+                <div class="case-study-images">
+
+                    <?php if($image_1) { ?>
+                        echo wp_get_attachment_image( $image_1, $size );
+                    <?php } ?>
+                        
+                    <?php if($image_2) { ?>
+                        echo wp_get_attachment_image( $image_2, $size );
+                    <?php } ?>
+                        
+                     <?php if($image_3) { ?>
+                        echo wp_get_attachment_image( $image_3, $size );
+                    <?php } ?>
+                </div>
+    <?php endwhile; // end of the loop. ?>
+
+            </article>
+            
+
+            
 
         </div><!-- #content -->
     </div><!-- #primary -->
