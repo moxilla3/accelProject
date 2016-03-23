@@ -22,8 +22,8 @@ get_header(); ?>
                 $link = get_field('site_link');  
                 $image1 = get_field('image_1');  
                 $image2 = get_field('image_2');  
-                $image3 = get_field('image_3'); ?>
-                $size = "medium";
+                $image3 = get_field('image_3'); 
+                $size = "full"; ?>
 
             <article class="case-study">
 
