@@ -10,6 +10,9 @@
  * in a function_exists() call) by defining them first in your child theme's
  * functions.php file. The child theme's functions.php file is included before
  * the parent theme's file, so the child theme functions would be used.
+
+
+
  *
  * @link http://codex.wordpress.org/Theme_Development
  * @link http://codex.wordpress.org/Child_Themes
@@ -38,3 +41,7 @@ function create_custom_post_types() {
     );
 }
 add_action( 'init', 'create_custom_post_types' );
+
+
+
+

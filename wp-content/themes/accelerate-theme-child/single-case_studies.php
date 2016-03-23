@@ -6,11 +6,17 @@
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site will use a
  * different template.
+
+
  *
  * @package WordPress
  * @subpackage Accelerate
  * @since Accelerate 1.1
  */
+
+
+
+
 
 get_header(); ?>
 
@@ -20,9 +26,9 @@ get_header(); ?>
                 $services = get_field('services');  
                 $client = get_field('client');  
                 $link = get_field('site_link');  
-                $image1 = get_field('image_1');  
-                $image2 = get_field('image_2');  
-                $image3 = get_field('image_3'); 
+                $image_1 = get_field('image_1');  
+                $image_2 = get_field('image_2');  
+                $image_3 = get_field('image_3'); 
                 $size = "full"; ?>
 
             <article class="case-study">
@@ -47,11 +53,11 @@ get_header(); ?>
                         
                     <?php if($image_2) { 
                         echo wp_get_attachment_image( $image_2, $size );
-                     } ?>
+                    } ?>
                         
                      <?php if($image_3) { 
                         echo wp_get_attachment_image( $image_3, $size );
-                     } ?>
+                    } ?>
                      
                 </div>
     <?php endwhile; // end of the loop. ?>

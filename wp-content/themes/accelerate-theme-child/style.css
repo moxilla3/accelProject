@@ -105,3 +105,53 @@ div.case-study-images img {
 	height:1005;
 	text-align: right;
 }
+
+
+
+
+/* start week2 day 3 hompage 3 in a row */
+
+
+
+
+ul.homepage-featured-work,  ul.homepage-featured-work li{
+	
+	text-align: center; 
+    list-style: none; 
+    background-color: pink; 
+    
+
+}
+
+
+
+.homepage-featured-work li{	
+    text-align: center;
+	display: inline-block;  
+
+}
+
+li.individual-featured-work {
+
+	
+}
+
+
+
+
+li.individual-featured-work h3{	
+    font-size: 1em;
+    padding-bottom: 50px;
+    clear: both; 
+}
+
+
+
+
+
+.site-content h4 {
+	text-align: center;
+	text-transform: uppercase; 
+	padding-bottom: 35px;
+	
+}
