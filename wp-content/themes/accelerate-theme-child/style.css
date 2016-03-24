@@ -109,49 +109,54 @@ div.case-study-images img {
 
 
 
-/* start week2 day 3 hompage 3 in a row */
 
 
 
 
-ul.homepage-featured-work,  ul.homepage-featured-work li{
-	
-	text-align: center; 
-    list-style: none; 
-    background-color: pink; 
-    
 
+
+/* Featured work on homepage */
+.featured-work {
+	overflow:auto;
+	width: 1200px;
 }
 
-
-
-.homepage-featured-work li{	
+.featured-work h3 {
+    font-size: 22px;
+    line-height: 1.09091;
     text-align: center;
-	display: inline-block;  
-
 }
 
-li.individual-featured-work {
-
-	
-}
-
-
-
-
-li.individual-featured-work h3{	
-    font-size: 1em;
-    padding-bottom: 50px;
-    clear: both; 
-}
-
-
-
-
-
-.site-content h4 {
+.featured-work p {
 	text-align: center;
-	text-transform: uppercase; 
-	padding-bottom: 35px;
-	
+}
+
+.featured-work h4 {
+	font-family:'Montserrat';
+	text-transform:uppercase;
+	text-align:center;
+	margin:0 0 40px;
+}
+
+.featured-work ul {
+	margin:0;
+}
+
+.individual-featured-work {
+    float: left;
+    list-style-type: none;
+    margin: 0 20px 0 0;
+    width: 31%;
+}
+
+.individual-featured-work h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.individual-featured-work:nth-child(3n) {
+    margin: 0;
+    width: 31%;
 }

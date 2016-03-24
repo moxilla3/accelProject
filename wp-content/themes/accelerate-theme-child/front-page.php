@@ -32,47 +32,54 @@ get_header(); ?>
 
 
 
+
+
+
 <section class="featured-work">
 	<div class="site-content">
+		<h4>Featured Work</h4>
+		
+			<ul class="homepage-featured-work">
 
-		<h4 style="font-family: sans-serif; font-style:">Featured Work</h4>
+			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
+				<?php while ( have_posts() ) : the_post(); 
+					$image_1 = get_field("image_1");
+					$size = "medium" 
+				?>
+					<li class="individual-featured-work">
+					<figure>
+						<?php echo wp_get_attachment_image($image_1, $size); ?>
 
-		<ul class="homepage-featured-work">
-		<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
- 						<?php while ( have_posts() ) : the_post(); 
- 							$image_1 = get_field("image_1");
- 							$size = "medium";
- 						?>
+					</figure>
+					
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				</li>
+				<li class="individual-featured-work">
+					<figure>
+						<?php echo wp_get_attachment_image($image_1, $size); ?>
 
- 							
-						<li class="individual-featured-work">
- 							
- 							<figure>
- 								<?php echo wp_get_attachment_image($image_1, $size); ?> 
- 							</figure>	
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					</figure>
+					
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				</li>
+<li class="individual-featured-work">
+					<figure>
+						<?php echo wp_get_attachment_image($image_1, $size); ?>
 
-							<figure>
- 								<?php echo wp_get_attachment_image($image_1, $size); ?> 
- 							</figure>	
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					</figure>
+					
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				</li>				<?php endwhile; // end of the loop. ?>
+				<?php wp_reset_query(); // resets the altered query back to the original ?>
 
-							<figure>
- 								<?php echo wp_get_attachment_image($image_1, $size); ?> 
- 							</figure>	
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						</li>	
-
-
-							<?php endwhile; // end of the loop. ?>
-							<?php wp_reset_query(); // resets the altered query back to the original ?>
-						</ul>
-
-
-
+			</ul>
 
 	</div>
 </section>
+
+
+
+
 
 
 
